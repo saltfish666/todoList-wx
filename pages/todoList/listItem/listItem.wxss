@@ -1,0 +1,40 @@
+.listItem{
+  margin: 15rpx;
+}
+
+.item-header{
+    display: flex;
+    align-items: center
+}
+.item-title{
+    width:60%;
+}
+.item-title-del{
+    width:60%;
+    text-decoration:line-through;
+    color:#cce6ff
+}
+
+.item-state{
+  padding: 0px 3%;
+  background-color: #00b300;
+  color: white;
+  font-size: 32rpx;
+}
+
+.item-del{
+  padding: 0px 3%;
+  background-color: #ff704d;
+  color: white;
+  font-size: 32rpx;
+}
+
+.item-body{
+  font-size: 28rpx
+}
+
+.item-body-del{
+  font-size: 28rpx;
+  text-decoration:line-through;
+  color:#cce6ff
+}

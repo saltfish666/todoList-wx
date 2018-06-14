@@ -1,0 +1,30 @@
+@import "./listItem/listItem.wxss";
+
+input{
+  margin: 10rpx;
+  border: 100rpx,solid,beige
+}
+textarea{
+  height: 220rpx;
+  margin-left: 10rpx;
+  width: 100%;
+}
+
+.active{
+  background-color: green;
+  border-radius: 40rpx;
+  color: white;
+}
+
+.viewState{
+	display:flex
+}
+.viewStateContainner{
+  width:auto;
+  margin:0px auto;
+
+  display: flex;
+}
+.viewStateContainner text{
+	padding: 10rpx 50rpx;
+}

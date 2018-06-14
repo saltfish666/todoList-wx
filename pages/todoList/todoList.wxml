@@ -1,0 +1,18 @@
+<import src="./listItem/listItem"/>
+<view>
+    <input placeholder='事务标题' value='{{inputtingTask.title}}' bindinput="onTitleInput"></input>
+    <textarea placeholder='事务内容[选填]' value='{{inputtingTask.body}}' bindinput="onBodyInput"></textarea>
+    <button bindtap='submitOnTap'>提交事务</button>
+    <view class="viewState">
+      <view class="viewStateContainner" >
+        <text bindtap="stateAllOnTap" class="{{viewState == 'all' ? 'active' : ''}}">all</text>
+        <text bindtap="stateFinishedOnTap" class="{{viewState == 'finished' ? 'active' : ''}}">finished</text>
+        <text bindtap="stateUnfinishedOnTap" class="{{viewState == 'unfinished' ? 'active' : ''}}">unfinished</text>
+      </view>
+    </view>
+    
+    <view wx:for="{{todoList}}" class="" wx:key="{{item.title}}">
+        <template is="listItem" data="{{item,index}}" wx:if="{{viewState == 'all' || item.state == viewState}}" />
+    </view>
+
+</view>

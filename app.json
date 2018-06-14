@@ -1,0 +1,9 @@
+{
+  "pages":[
+  	"pages/todoList/todoList"
+  ],
+  "window":{
+    "navigationBarBackgroundColor":"#b3e0ff",
+    "navigationBarTitleText":"fish备忘录"
+  }
+}

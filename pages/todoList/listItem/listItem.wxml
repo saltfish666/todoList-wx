@@ -1,0 +1,21 @@
+
+<template name="listItem">
+    <view class="listItem">
+        <view class="item-header">
+            <!--<text class="{{item.state == 'finished' ? 'item-title-del' : 'item-title'}}">{{item.title}}</text>
+            <text class="item-ok" >{{item.state == "finished" ? '取消' : '完成'}}</text>-->
+
+            <text wx:if="{{item.state == 'finished'}}" class="item-title-del">{{item.title}}</text>
+            <text wx:if="{{item.state == 'unfinished'}}" class="item-title">{{item.title}}</text>
+            
+            <!-- <text class="item-state" wx:if="{{item.state == 'finished'}}" bindtap="changeItemState" data-index="{{index}}">取消</text>
+            <text class="item-state" wx:if="{{item.state == 'unfinished'}}" bindtap="changeItemState1" data-index="{{index}}">完成</text> -->
+             <text class="item-state" bindtap="changeItemState" data-index="{{index}}">{{item.state == "finished" ? '取消' : '完成'}}</text>
+
+            <text class="item-del" bindtap="delTaskItem" data-index="{{index}}">删除</text>
+        </view>
+        <view class="{{item.state == 'finished' ? 'item-body-del' : 'item-body'}}">
+          {{item.body}}
+        </view>
+    </view>
+</template>
